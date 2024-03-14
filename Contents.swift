@@ -1,27 +1,46 @@
 import UIKit
 
-func gasCalc(){
-    var timePrices = [1.3, 1.1, 1.6, 1.8, 1.4, 1.7, 1.4, 2.3]
-    var yearPrices = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"]
+
+print("Bill's Burgers")
+
+struct basicSet {
     
-    var sortPrices = timePrices.sorted{
-        (firstValue, secondValue) -> Bool in
-        return firstValue < secondValue
+    let price: Int
+    var item: String
+    
+    let glutenFree: String?
+    
+    var menuItem: String{
+        return "Food Item: \(item), Price: $\(price)"
+        
     }
     
-    let price = 1.7
-    let price2 = 1.4
-    let price3 = 2.3
-    
-    var add = (price + price2 + price3)
-    
-    var calc = (add / 3)
-    
-    print("The average is for the three years is", calc)
-    
-    print(sortPrices)
 }
 
-gasCalc()
+print("Appetizers")
 
+print("")
 
+var fireCracker = basicSet(price: 13, item: "Firecracker Shrimp", glutenFree: "Yes")
+print(fireCracker.menuItem)
+
+var pretzel = basicSet(price: 10, item: "Bavarian Pretzel", glutenFree: "No")
+print(pretzel.menuItem)
+
+var tuna = basicSet(price: 15, item: "Seared Ahi Tuna", glutenFree: "Yes")
+print(tuna.menuItem)
+
+print("")
+
+print("Main Courses")
+
+print("")
+
+var bur = basicSet(price: 16, item: "Patty Melt Burger", glutenFree: "No")
+print(bur.menuItem)
+
+var bur2 = basicSet(price: 16, item: "BlackJack Burger", glutenFree: "No")
+print(bur2.menuItem)
+
+var bur3 = basicSet(price: 20, item: "Waygu Cheddar Burger", glutenFree: "No")
+print(bur3.menuItem)
