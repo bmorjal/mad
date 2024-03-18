@@ -1,46 +1,28 @@
 import UIKit
+import Foundation
 
+print("Prius LE Builder")
 
-print("Bill's Burgers")
-
-struct basicSet {
+class prius{
+    var color: String
+    var type: String
+    var seats: String
+    var wheels: String
     
-    let price: Int
-    var item: String
-    
-    let glutenFree: String?
-    
-    var menuItem: String{
-        return "Food Item: \(item), Price: $\(price)"
-        
+    init(color: String, type: String, seats: String, wheels: String){
+        self.color = color
+        self.type = type
+        self.seats = seats
+        self.wheels = wheels
     }
     
+    func printResults(){
+        print("Color: \(self.color), Car type: \(self.type), Seat type: \(self.seats), Wheels: \(self.wheels)")
+    }
 }
 
-print("Appetizers")
+var option1 = prius(color: "Red", type: "LE", seats: "Leather", wheels: "Alloy")
+var option2 = prius(color: "Green", type: "LE", seats: "Cloth", wheels: "Stock")
 
-print("")
-
-var fireCracker = basicSet(price: 13, item: "Firecracker Shrimp", glutenFree: "Yes")
-print(fireCracker.menuItem)
-
-var pretzel = basicSet(price: 10, item: "Bavarian Pretzel", glutenFree: "No")
-print(pretzel.menuItem)
-
-var tuna = basicSet(price: 15, item: "Seared Ahi Tuna", glutenFree: "Yes")
-print(tuna.menuItem)
-
-print("")
-
-print("Main Courses")
-
-print("")
-
-var bur = basicSet(price: 16, item: "Patty Melt Burger", glutenFree: "No")
-print(bur.menuItem)
-
-var bur2 = basicSet(price: 16, item: "BlackJack Burger", glutenFree: "No")
-print(bur2.menuItem)
-
-var bur3 = basicSet(price: 20, item: "Waygu Cheddar Burger", glutenFree: "No")
-print(bur3.menuItem)
+option1.printResults()
+option2.printResults()
